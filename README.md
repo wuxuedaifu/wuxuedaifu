@@ -1,20 +1,30 @@
-### Hi, I'm Fu Dai (wuxuedaifu) 👋
+# Fu Dai
 
-Data Scientist, AI/ML engineer building **production multimodal systems** — voice, vision, and LLM-driven applications.
+Data Scientist with a production engineering side. I work on AI systems that
+have to run reliably at inference time — not just in notebooks.
 
-- 🔭 **Currently working on:** Face Recognition · Voice STT & TTS · LLM-based news intelligence · Fault diagnosis
-- 🧠 **Focus:** Large Language Models, multi-agent systems, and multimodal AI (voice + vision), deployed at production scale on Kubernetes
-- 🌱 **Exploring:** real-time streaming TTS and agentic workflows
+Current focus: multimodal AI serving (TTS, OCR, LLM) on GPU infrastructure.
 
-### 🛠️ Tech Stack
+## Production serving systems
 
-**Languages:** Python · Java · SQL · Shell
-**AI/ML:** LLMs · multi-agent systems · ASR/TTS · multimodal (voice + vision)
-**Backend:** FastAPI · Spring Boot · Prefect
-**Data:** ClickHouse · PostgreSQL
-**Infra:** Docker · Kubernetes · GitLab CI/CD
+Three repos with real benchmark data on A100 / H200:
 
-### 📫 Connect
+| Repo | What it does |
+|------|-------------|
+| [vllm-chatterbox-stream](https://github.com/wuxuedaifu/vllm-chatterbox-stream) | Multilingual TTS on vLLM — ~0.7s TTFB, 23 languages, voice cloning, OpenAI-compatible |
+| [vllm-surya-ocr](https://github.com/wuxuedaifu/vllm-surya-ocr) | OCR serving with vLLM — 9.5× speedup via CUDA graphs, concurrency sweep tested |
+| [xttsv2-vllm-streaming-server](https://github.com/wuxuedaifu/xttsv2-vllm-streaming-server) | XTTS-v2 real-time streaming — ~0.5s TTFB, Docker, GPU serving |
 
-- GitHub: [@wuxuedaifu](https://github.com/wuxuedaifu)
-- Email: wuxuedaifu@gmail.com
+All three expose OpenAI-compatible APIs and ship with Docker.
+
+## Data science work
+
+- **ASR / TTS**: speech systems, streaming inference, latency optimization
+- **Vision**: OCR, face recognition, document AI
+- **LLM**: RAG pipelines, serving infra, OpenAI-compatible APIs
+- **Data**: ClickHouse, PostgreSQL, ETL pipelines, AQI/weather data systems
+
+## Stack
+
+Python · vLLM · FastAPI · CUDA · Docker · Kubernetes  
+ClickHouse · PostgreSQL · Java · SQL

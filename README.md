@@ -1,4 +1,3 @@
-# Fu Dai
 
 Data Scientist with a production engineering side. I work on AI systems that
 have to run reliably at inference time — not just in notebooks.
